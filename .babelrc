@@ -5,6 +5,7 @@
       {
         "targets": {
           "browsers": [
+            "> 1%",
             "last 2 versions"
           ]
         }
@@ -12,6 +13,14 @@
     ]
   ],
   "plugins": [
-    "@babel/transform-runtime"
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": false,
+        "moduleName": "babel-runtime"
+      }
+    ]
   ]
 }
